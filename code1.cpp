@@ -47,11 +47,8 @@ n(n+2)/2
 void solve(){
     ll n,m;cin>>n>>m;
     if(n>m)swap(n,m);
-    // cout<<n<<endl;
-    int ans = 0;
-    ans+=(m*(m-1))/2;
     int a = m;
-    cout<<ans+(((a+(n-1)*2)+a)/2)*n<<endl;
+    cout<<(m*(m-1))/2+(((a+(n-1)*2)+a)/2)*n<<endl;
 }
 
 int main() {
