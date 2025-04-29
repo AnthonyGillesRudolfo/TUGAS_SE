@@ -49,31 +49,9 @@ void solve(){
     if(n>m)swap(n,m);
     // cout<<n<<endl;
     int ans = 0;
-    int now = 1;
-    if(n>=m){
-        for(int i = n-1 ; i > 0 ; i--){
-            // cout<<now<<endl;
-            ans+=now;
-            now++;
-        }
-
-        for(int i = 0 ; i < m ; i++){
-            ans+=now;
-            now+=2;
-        }
-    }
-    else{
-        for(int i = 0 ; i < m-1 ; i++){
-            // cout<<now<<endl;
-            ans+=now;
-            now++;
-        }
-
-        for(int i = 0 ; i < n ; i++){
-            ans+=now;
-            now+=2;
-        }
-    }
+    ans+=(m*(m-1))/2;
+    int a = m;
+    cout<<ans+(((a+(n-1)*2)+a)/2)*n<<endl;
 }
 
 int main() {
